@@ -378,8 +378,8 @@ if __name__ == "__main__":
     print('  Callsign: %(callsign)s' % {'callsign': c.callsign})
     print('  VendorID: %(vendorid)s' % {'vendorid': c.vendorid})
     print('  UnitModel: %(unitmodel)d' % {'unitmodel': c.unitmodel})
-    print('  UnitSerial: %(sernum)d' % {'sernum': c.sernum})
-    print('  Reference point A (m): {:d} (read-only battery voltage {:.1f}V)' .format(c.refa, c.refa/10.00))
+    print('  UnitSerial (Read-only Battery Voltage): %(sernum)d' % {'sernum': c.sernum})
+    print('  Reference point A (m): %(refa)d' % {'refa': c.refa}) 
     print('  Reference point B (m): %(refb)d' % {'refb': c.refb})
     print('  Reference point C (m): %(refc)d' % {'refc': c.refc})
     print('  Reference point D (m): %(refd)d' % {'refd': c.refd})
@@ -400,4 +400,5 @@ if __name__ == "__main__":
         if args.write:
             print('Must supply serial device with -d option.')
             exit(1)
+
 
